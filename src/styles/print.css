@@ -1,0 +1,81 @@
+/* print.css */
+
+/* Загальні стилі для друку */
+@media print {
+  /* Встановлюємо поля сторінки */
+  body {
+    margin: 50px;
+  }
+
+  /* Вимкнути розриви перед і після елементів */
+  * {
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: avoid;
+  }
+  /* Запобігаємо розривам у контейнерах */
+  div, section, article, main, footer, header {
+    page-break-inside: avoid; /* Запобігає розривам всередині цих елементів */
+  }
+
+  /* Визначимо, що елементи не повинні розриватися на нову сторінку */
+  .container, .content, .main-content {
+    page-break-before: avoid; /* Не створюємо нову сторінку для контейнерів */
+    page-break-after: avoid;
+    max-width: 100%;
+  }
+  .content {
+    max-height: 100%;
+    page-break-before: avoid;
+  }
+  img {
+    max-width: 100%; /* Для зображень обмежуємо розмір */
+    height: auto;
+    page-break-inside: avoid; /* Запобігаємо розривам всередині зображень */
+  }
+
+  table {
+    width: 100%;
+    page-break-inside: auto; /* Запобігаємо розривам всередині таблиць */
+  }
+
+  /* Приховуємо шапку, підвал та навігаційну панель */
+  header, footer, nav{
+    display: none !important;
+  }
+
+  /* Виводимо тільки назву сайту, заголовок та вміст */
+  .site-title, h1, h2, h3, p {
+    display: block;
+    page-break-before: always;
+  }
+
+  /* Видаляємо фонові кольори та зображення */
+  * {
+    background: none !important;
+    color: black !important;
+  }
+
+  /* Виведення повного URL замість гіперпосилань */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+  }
+
+  body {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Times New Roman", Georgia, Palatino, serif; /* Встановлюємо шрифт з засіками */
+  }
+
+  .container {
+    margin: 0 auto; /* Вирівнюємо контейнери по центру */
+    padding: 20px;
+  }
+}

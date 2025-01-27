@@ -1,0 +1,18 @@
+@import '_variables';
+
+@import (inline) 'normalize.css';
+
+// Базові стилі
+body {
+  background: linear-gradient(135deg, @primary-color, @light-color);
+  font-family: @font-family;
+  margin: 0;
+  padding: 0;
+}
+
+// Контейнер
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: @container-padding;
+}

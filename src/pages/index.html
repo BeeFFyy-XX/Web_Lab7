@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Особиста сторінка</title>
+  <link rel="stylesheet" href="../styles/print.css" media="print">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="ie-warning">
+      <h1>Ваш браузер застарів. Рекомендуємо оновити його до новішої версії для кращого досвіду на сайті.</h1>
+    </div>
+    <h1 class="header__title">Особиста сторінка (блог) Шапки А.С</h1>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="container">
+    <ul class="nav__list">
+      <li class="nav__item"><a class="nav__link" href="rozklad.html">Мій розклад</a></li>
+      <li class="nav__item"><a class="nav__link" href="photo.html">Фотоальбом</a></li>
+      <li class="nav__item"><a class="nav__link" href="news.html">Останні новини</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="container">
+    <section class="section">
+      <h2 class="section__title">Моя біографія</h2>
+      <img class="section__photo" src="../../assets/images/avatar.jpg" alt="Моє фото">
+      <p class="section__text">
+        Навчаюсь в ЗНУ. На третьому курсі на 121 спеціальність - Програмна інженерія.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Мої хоббі</h2>
+      <ul class="section__list">
+        <li class="section__item">Програмування</li>
+        <li class="section__item">Комп'ютерні ігри</li>
+        <li class="section__item">Музика</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__text">
+      &copy; 2025. Всі права захищені.
+      <a class="footer__link" href="mailto:andreyshapka2002@gmail.com">Написати мені</a>.
+    </p>
+  </div>
+</footer>
+<script>
+  // Функція для перевірки версії Internet Explorer
+  function checkIEVersion() {
+    var ua = window.navigator.userAgent;
+    var version = -1;
+
+    if (ua.indexOf('MSIE') > -1) {
+      // Для старих версій IE (до 11)
+      version = parseInt(ua.split('MSIE ')[1].split(';')[0]);
+    } else if (ua.indexOf('Trident') > -1) {
+      // Для IE 11
+      version = parseInt(ua.split('rv:')[1].split(')')[0]);
+    }
+
+    return version;
+  }
+
+  // Перевіряємо, чи використовують IE 10 або старіші версії
+  window.onload = function() {
+    var ieVersion = checkIEVersion();
+    if (ieVersion >= 0 && ieVersion <= 10) {
+      document.getElementById("ie-warning").style.display = "block"; // Показуємо попередження
+    }
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@import '_variables';
+@import '_mixins';
+
+.footer {
+  background-color: @secondary-color;
+  padding: @container-padding 0;
+  text-align: center;
+
+  &__text {
+    .text-style(@light-color, 1rem);
+  }
+
+  &__link {
+    .text-style(@accent-color, inherit);
+    text-decoration: none;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}

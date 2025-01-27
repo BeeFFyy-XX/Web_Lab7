@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Особиста сторінка</title>
+</head>
+<body>
+  <header>
+    <h1>Особиста сторінка (блог) ФІО</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="rozklad.html">Моє розклад</a></li>
+      <li><a href="photo.html">Фотоальбом</a></li>
+      <li><a href="news.html">Останні новини</a></li>
+      <li><a href="index.html">Головна</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Моя біографія</h2>
+      <img src="../assets/images/avatar.jpg" alt="Моє фото" style="width:200px;height:auto;">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet, lacus ut venenatis pharetra.
+      </p>
+    </section>
+
+    <section>
+      <h2>Моє захоплення</h2>
+      <ul>
+        <li>Програмування</li>
+        <li>Читання</li>
+        <li>Подорожі</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025. Всі права захищені. <a href="#">Написати мені</a>.</p>
+  </footer>
+</body>
+</html>

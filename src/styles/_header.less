@@ -1,0 +1,16 @@
+@import '_variables';
+@import '_mixins';
+
+.header {
+  text-align: center;
+  padding: @container-padding;
+  background-color: @secondary-color;
+
+  &__title {
+    .text-style(@light-color, 2rem);
+  }
+}
+
+.ie-warning {
+  display: none;
+}

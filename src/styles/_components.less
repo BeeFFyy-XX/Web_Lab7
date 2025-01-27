@@ -1,0 +1,136 @@
+@import '_variables';
+@import '_mixins';
+
+// Навігація
+.nav {
+  background-color: @tertiary-color;
+  display: flex;
+  justify-content: space-around;
+
+  .nav__list {
+    .center;
+    list-style: none;
+    padding: 0;
+
+    .nav__item {
+      margin: 0 15px;
+
+      .nav__link {
+        .text-style(@light-color, 1.1rem);
+        text-decoration: none;
+
+        &:hover {
+          color: @accent-color;
+        }
+      }
+    }
+  }
+}
+
+// Секції
+.section {
+  margin-bottom: @section-margin;
+  text-align: center;
+
+  &__title {
+    .text-style(@tertiary-color, 1.8rem);
+    margin-bottom: 20px;
+  }
+
+  &__photo,
+  &__image {
+    display: block;
+    margin: 0 auto 0 auto;
+  }
+
+  &__photo {
+    width: auto;
+    height: auto;
+  }
+
+  &__image {
+    width: 1200px;
+    height: 800px;
+  }
+
+  &__text {
+    .text-style(@secondary-color, 1.1rem);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    color: @tertiary-color;
+
+    &__item {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    color: @tertiary-color;
+    text-decoration: none;
+  }
+
+  // Таблиця
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+
+    &__header,
+    &__data {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: left;
+      color: @tertiary-color;
+    }
+
+    &__header {
+      background-color: @secondary-color;
+    }
+  }
+}
+
+
+// Вертикальне розташування меню
+@media (max-width: 650px) {
+    .table {
+      width: 100px;
+      height: auto;
+
+      &__header,
+      &__data {
+        font-size: xx-small;
+      }
+    }
+  }
+
+
+
+
+
+// Вертикальне розташування меню
+@media (max-width: 768px) {
+  .nav__list {
+    display: flex;
+    flex-direction: column; // Вертикальне розташування
+    align-items: center; // Центрування
+  }
+
+  .nav__item {
+    margin: 10px 0; // Відступи між пунктами меню
+  }
+}
+
+/* Зменшення зображень на малих екранах */
+@media (max-width: 1200px) {
+  .section {
+    &__photo,
+    &__image{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

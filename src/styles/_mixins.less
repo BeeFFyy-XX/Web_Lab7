@@ -1,0 +1,26 @@
+// Центрування контенту
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Текст із кольором та розміром
+.text-style(@color, @size) {
+  color: @color;
+  font-size: @size;
+}
+
+// Кнопки (приклад, якщо потрібно)
+.button(@bg-color, @text-color) {
+  background-color: @bg-color;
+  color: @text-color;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(@bg-color, 10%);
+  }
+}
